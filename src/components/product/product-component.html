@@ -1,0 +1,21 @@
+<a class="f-card-grid" routerLinkActive="active" *ngIf="product.name && product.name !== ''">
+	<div class="f-card-image">
+		<img [src]="product.image">
+	</div>
+	<div class="f-card-content">
+		<h4 class="f-card-title">{{ product.name }}</h4>
+		<p class="f-card-cuisine">
+			<span *ngFor="let cuisine of product.cuisine">
+				{{ cuisine }}
+			</span>
+		</p>
+		<div class="flex-center-between">
+			<div class="f-card-rating" *ngIf="product.rating">
+				<span class="rating green icon-star-full">{{ product.rating }}</span>
+			</div>
+			<div class="f-card-rating" *ngIf="product.delivery_time">
+				<span class="rating">{{ product.delivery_time }} mins</span>
+			</div>
+		</div>
+	</div>
+</a>

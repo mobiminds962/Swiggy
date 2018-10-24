@@ -1,0 +1,15 @@
+<header class="s-header text-center">
+  {{ title }}
+</header>
+<div class="page-restaurant">
+	<h6 *ngIf="query && query !== ''">Search Results for {{query}}</h6>
+	<select [(ngModel)]="category" id="category" class="category">
+	   <option value="" disabled selected>Sort</option>
+	   <option *ngFor="let item of categories" [value]="item.category">{{item.name}}</option>
+	</select>
+	<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500" (scrolled)="onScroll()">
+		<div class="f-grid-container has-footer">
+			<product-component *ngFor="let product of restaurantArr" [product]="product" class="f-product-component"></product-component>
+		</div>
+	</div>
+</div>

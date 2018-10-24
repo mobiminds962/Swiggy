@@ -1,0 +1,157 @@
+*:focus {
+    outline: none;
+}
+
+.no-display {
+  display: none;
+}
+
+.margin-right {
+	margin-right: 15px;
+}
+.padding {
+	padding: 20px;
+}
+.no-padding {
+  padding: 0;
+}
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.row {
+	@include display-flex;
+	@include align-items(center);
+	width: 100%;
+}
+
+.col {
+	@include flex(1);
+	display: block;
+	padding: 5px;
+	width: 100%;
+}
+
+.col-50 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-80 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 80%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 80%;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.col-20 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+}
+
+.has-footer {
+  min-height: 480px;
+}
+
+.p-content-top {
+  padding-top: 85px;
+}
+
+.no-content {
+  text-align: center;
+  h5 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+  }
+  p {
+    color: #878787;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+  }
+}
+.flex-center {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+}
+.flex-center-between {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+.flex-align-center {
+  @include align-items(center);
+}
+.heading {
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.8rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+.f-breadcrumb {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+  .f-breadcrumb-item {
+    text-align: center;
+    max-width: 280px;
+    h2 {
+      color: #0079C1;
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+    p {
+      margin: 10px 0 30px;
+      font-size: 14px;
+      font-size: 1.4rem;
+      color: #000;
+      a {
+        margin-top: 5px;
+        color: #34a853;
+        font-weight: bold;
+        cursor: pointer;
+        span {
+          display: block;
+          margin-right: 5px;
+        }
+      }
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @media only screen and (max-width: 767px)  {
+    @include flex-direction(column);
+  }
+}

@@ -1,0 +1,17 @@
+<header class="s-header text-center">
+  {{ title }}
+</header>
+<div class="page-home">
+	<div class="auto-complete">
+		<div class="search-box">
+		  <span class="icon-search"></span>
+		  <input [(ngModel)]="inputValue" placeholder="Search For Restaurants or Dishes" (keyup)="filterValues()" (keyup.enter)="onSearch()"/>
+		  <span *ngIf="inputValue && inputValue !== ''" class="icon-close" (click)="clearSearch()"></span>
+		</div>
+		<div *ngIf='restaurantArr'>
+		  <p *ngFor="let item of restaurantArr">
+		    {{ item.name }}
+		  </p>
+		</div>
+	</div>
+</div>

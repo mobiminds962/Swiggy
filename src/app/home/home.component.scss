@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+.s-header {
+	background-color: #fc8019;
+	color: #ffffff;
+	padding: 5px 8px;
+}
+.page-home {
+	@include display-flex();
+	height: 100%;
+	width: 100%;
+    @include align-items(center);
+    @include justify-content(center);
+    position: absolute;
+    .auto-complete {
+    	@include display-flex();
+    	@include flex-direction(column);
+    	width: 75%;
+    }
+    .search-box {
+    	@include display-flex();
+    	@include align-items(center);
+	    padding: 5px 8px;
+        border: 1px solid #5b5b5b;
+        input {
+        	border: none;
+        	width: 100%;
+        }
+    }
+}
